@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td colspan="2">
+
+                              <p style="font-size: 16px; color: #333; line-height: 24px;" id="buyer_name_col">
+                                <p>Buyer:</p>
+                                {{user_first_name}} {{user_last_name}}
+                              </p>
+                              <p style="font-size: 16px; color: #333; line-height: 24px;"  id="buyer_phone_col">
+                                {{user_phone_no}}
+                              </p>
+                              <p style="font-size: 16px; color: #333; line-height: 24px;"  id="buyer_email_col">
+                                {{user_email}}
+                              </p>
+
+                              <p style="font-size: 16px; color: #333; line-height: 24px;" id="agent_name_col">
+                                <p>Agent:</p>
+                                {{agent_first_name}} {{agent_last_name}}
+                              </p>
+                              <p style="font-size: 16px; color: #333; line-height: 24px;"  id="agent_phone_col">
+                                {{agent_phone_no}}
+                              </p>
+                              <p style="font-size: 16px; color: #333; line-height: 24px;"  id="agent_email_col">
+                                {{agent_email}}
+                              </p>
+
+                              <p style="font-size: 16px; color: #333; line-height: 24px;">
+                                Regarding: Purchase and Sale of <strong>{{property_address_one}} {{property_city}}, {{property_state}}, {{property_postal_code}}</strong>
+                              </p>
+                              <p style="font-size: 16px; color: #333; line-height: 24px;">
+                                This non-binding Letter of Intent (“LOI”) sets forth the general terms upon which {{user_first_name}} {{user_last_name}} (“Buyer”) will purchase {{property_address_one}} {{property_city}}, {{property_state}}, {{property_postal_code}} (“The Property”) from Selling Entity (“Seller”). Buyer and Seller will not be legally bound to transact unless and until the execution and delivery of a Purchase and Sale Agreement (“PSA”) by Buyer and Seller. The purpose of LOI is to provide the basis and general terms for which a transaction will be contemplated and negotiated, and to outline the main terms for which a PSA may eventually be documented.
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              PROPERTY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              <strong>{{property_address_one}} {{property_city}}, {{property_state}}, {{property_postal_code}}</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              PRICE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="offer_price_col">
+                              <strong>{{start_price}}</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              EARNEST MONEY DEPOSIT
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="earnest_deposit_col">
+                              <strong>{{earnest_money_deposit}} </strong> will be placed in escrow at the mutual execution of a Purchase and Sale Agreement. Following the expiration of the Due Diligence Period, the Deposit shall be non-refundable to Buyer.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              DOWN PAYMENT
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="down_payment_col">
+                              <strong>{{down_payment}} </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              LOAN TYPE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="loan_type_col">
+                              {{loan_type}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              INSPECTION CONTINGENCY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="due_diligence_col">
+                              The Buyer shall have <strong>{{due_diligence_period}}</strong> beginning at the effective date of the PSA to inspect and perform Due Diligence as Buyer deems reasonably necessary to further evaluate the Purchase of Property(s).
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              FINANCING CONTINGENCY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              {{offer_contingent}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              APPRAISAL CONTINGENCY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="appraisal_contingency_col">
+                              {{appraisal_contingency}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              PROPERTY SALE CONTINGENCY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="property_sale_contingency_col">
+                              {{property_sale_contingency}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              CLOSING DATE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="closing_period_col">
+                              Buyer and Seller shall close the Purchase and Sale of the Property <strong>{{closing_period}}</strong> after the expiration of the Due Diligence period.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              CLOSING COSTS
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              <strong>{{closing_cost}}</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              DUE DILIGENCE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              <strong>In connection with Buyer’s review of the Property, Seller will make available to Buyer, promptly upon request, such documents, books, records, and other information related to Property in Seller’s possession. Buyer may request additional items to be listed in the PSA</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              TITLE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              <strong>The Property is to be sold and conveyed free of liens and encumbrances, and title is to be deemed clean and marketable.</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              BROKER
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              The Seller is represented by <strong>Floyd Bates</strong> and shall be paid a commission at closing in accordance with the listing agreement or any other relevant and agreed upon agreement Broker has with Seller.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              CONTINUED OPERATIONS
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              Unless otherwise stated in the PSA, Seller will continue to operate the Property in a consistent manner as prior to this LOI. Major property decisions which might significantly affect the value of Property or nature of the contemplated transaction, should be brought to Buyer for discussion and review.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              CONFIDENTIALITY
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              The content of this LOI shall be confidential in nature and shall not be disclosed to other buyers.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              1031 EXCHANGE
+                            </td>
+                            <td style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                                {{financing}}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="height: 50px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="buyer_sign">
+                                Signature <span><i>{{user_first_name}} {{user_last_name}}</i></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;" id="buyer_name_sign">
+                              Buyer <span>{{user_first_name}} {{user_last_name}}</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;"  id="buyer_date">
+                                Date <span class="today_date">{% now "M, j Y" %}</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="height: 50px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="height: 50px;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              Signature ------------------------
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="font-size: 16px; color: #333; line-height: 24px; padding: 5px 10px;">
+                              Date ------------------------
+                            </td>
+                          </tr>
+                        </table>
+        </div>
+    </div>
+</body>
+</html>

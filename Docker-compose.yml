@@ -1,0 +1,79 @@
+version: '3'
+services:
+  api:
+    container_name: bidhom_api
+    build: .
+    command: python manage.py runserver 0.0.0:8000
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+     - db
+    networks:
+      # - frontend 
+      gsa_auction_ntwk:
+        ipv4_address: 172.28.0.16
+
+  cache:
+    container_name: bidhom_api_redis
+    image: redis:7.2
+    command: redis-server
+    restart: always
+    ports:
+      - '7379:6379'
+    # command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      # - REDIS_PASSWORD=p@$$w0rd!23
+    # volumes: 
+    #   - cache:/data
+    networks:
+      - gsa_auction_ntwk
+
+  db:
+    container_name: bidhom_db
+    image: postgres:latest
+    restart: always
+    ports:
+      - 8080:5432
+    # volumes:
+    #   - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=ibm_pass
+      - POSTGRES_USER=ibm_user
+      - POSTGRES_DB=ibm_database
+    networks:
+      - gsa_auction_ntwk  
+
+  pgadmin:
+    container_name: bidhom_pgadmin
+    image: dpage/pgadmin4
+    depends_on:
+      - db
+    ports:
+      - "5555:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: gautam@clavax.us
+      PGADMIN_DEFAULT_PASSWORD: ibm_pass
+    restart: unless-stopped
+    networks:
+      - gsa_auction_ntwk
+
+networks:
+  gsa_auction_ntwk:
+    name: gsa_auction_network
+    driver: bridge
+    # external: true  
+    ipam:
+     config:
+       - subnet: 172.28.0.0/16
+         gateway: 172.28.0.1
+
+# networks:
+#   gsa_ntwk:
+#     # Use a custom driver
+#     name: gsa_network
+#     driver: bridge
+#     external: true   

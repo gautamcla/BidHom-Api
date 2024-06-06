@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+    <meta http-equiv="x-ua-compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Submit LOI</title>
+    <style type="text/css">
+      @media screen and (max-width: 630px) {
+        .table {
+          width:100% !important;
+          height:auto !important;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        .center {
+          text-align:center !important;
+        }
+        .width100 {
+          width:100% !important;
+          padding-top:10px;
+        }
+        .font12 {
+          font-size:12px !important;
+        }
+      }
+
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <center>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;width:100%;font-family:'Proxima Nova', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size:16px;line-height:1;">
+        <tbody>
+          <tr>
+            <td>
+              <table class="table" align="center" width="660" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; width:660px; border: 3px solid #000; background: #FFF;">
+                <tbody>
+                  <tr>
+                    <td colspan="2" style="text-align: center; padding: 0 20px;">
+                      <h1 style="font-size: 24px; margin: 0; padding: 20px 0 0 0; line-height: 30px; color: #222;"><u>REAL ESTATE LETTER OF INTENT</u> </h1>
+                      <h4 style="font-size: 16px; margin: 0; padding: 20px 0 0 0; line-height: 30px; color: #222;">
+                        PROPERTY: <span style="color: #C71829;">{{property_address_one}} {{property_city}}, {{property_state}}, {{property_postal_code}}</span>
+                      </h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      &nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="50%" style="padding: 0 20px; text-align: left; vertical-align: top;">
+                      <p style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 22px; font-family: Arial, Helvetica, sans-serif;">
+                        <u>Buyer</u>
+                      </p>
+                      <p style="text-align: left; font-size: 13px; color: #C71829; font-weight: 400; line-height: 28px; font-family: Arial, Helvetica, sans-serif;">
+                        {{user_first_name}} {{user_last_name}} <br>
+                        {{user_phone_no}}<br>
+                        {{user_email}}
+                      </p>
+                    </td>
+                    <td width="50%" style="padding: 0 20px; vertical-align: top;">
+                      <p style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 22px; font-family: Arial, Helvetica, sans-serif;">
+                        <u>{{agent_text}}</u>
+                      </p>
+                      <p style="text-align: left; font-size: 13px; color: #C71829; font-weight: 400; line-height: 28px; font-family: Arial, Helvetica, sans-serif;">
+                        {{agent_first_name}} {{agent_last_name}}<br>
+                        {{agent_phone_no}}<br>
+                        {{agent_email}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="padding: 0 20px;">
+                      <p style="text-align: left; font-size: 13px; color: #222; line-height: 24px; font-family: Arial, Helvetica, sans-serif;">
+                        This is a non-binding letter of intent only. It does not create a legally binding obligation on the parties or their brokers. The purpose of this letter is to set forth some of the basic terms and conditions to be included and agreed on for a potential future definitive Purchase Agreement Contract. Any additional terms and conditions negotiated will be documented in a future formal Purchase Agreement Contract. The basic terms and conditions to be included are as follows:
+                      </p>
+                      <ul>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Price: <span style="color: #C71829;">{{start_price}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Earnest Money Deposit: <span style="color: #C71829;">{{earnest_money_deposit}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Down Payment: <span style="color: #C71829;">{{down_payment}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Loan Type: <span style="color: #C71829;">{{loan_type}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Inspection Contingency: <span style="color: #C71829;">{{due_diligence_period}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Financing Contingency: <span style="color: #C71829;">{{offer_contingent}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Appraisal Contingency: <span style="color: #C71829;">{{appraisal_contingency}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Property Sale Contingency: <span style="color: #C71829;">{{property_sale_contingency}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Closing Date: <span style="color: #C71829;">{{closing_period}}</span></li>
+                        <li style="text-align: left; font-size: 13px; color: #222; font-weight: 600; line-height: 26px; font-family: Arial, Helvetica, sans-serif;">Closing Costs: <span style="color: #C71829; ">{{closing_cost}}</span></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: left; font-size: 13px; padding: 0 20px; color: #222; font-weight: 400; line-height: 24px; font-family: Arial, Helvetica, sans-serif;">
+                      <p>
+                        Date {% now "M, j Y" %}
+                      </p>
+                      <p>
+                        Buyer {{user_first_name}} {{user_last_name}}
+                      </p>
+                      <p>
+                        Signature <i>{{user_first_name}} {{user_last_name}}</i>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
