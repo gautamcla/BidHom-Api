@@ -14,7 +14,7 @@ dj-database-url==2.1.0
 Django==5.0.4
 django-oauth-toolkit==1.4.0
 django-redis==5.4.0
-djangorestframework==3.14.0
+djangorestframework==3.15.2
 fcm-django==2.0.0
 firebase-admin==6.3.0
 fonttools==4.47.0
