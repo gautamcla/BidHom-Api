@@ -67,7 +67,7 @@ typing_extensions==4.9.0
 tzdata==2023.3
 uritemplate==4.1.1
 urllib3==2.1.0
-weasyprint==60.2
+weasyprint==68.0
 webencodings==0.5.1
 wrapt==1.16.0
 xmltodict==0.13.0
